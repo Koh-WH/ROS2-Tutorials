@@ -19,7 +19,13 @@ ament_target_dependencies(listener rclcpp std_msgs)
 install(TARGETS
   talker
   listener
-  DESTINATION lib/cpp_pubsub)
+  DESTINATION lib/cpp_pubsub
+)
+
+install(
+  DIRECTORY launch
+  DESTINATION share/${PROJECT_NAME}
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

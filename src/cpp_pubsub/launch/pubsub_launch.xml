@@ -1,0 +1,17 @@
+<launch>
+    <!-- Launch the MinimalPublisher node -->
+    <node
+        name="minimal_publisher"
+        pkg="cpp_pubsub"
+        exec="talker"
+        output="screen">
+    </node>
+
+    <!-- Launch the MinimalSubscriber node -->
+    <node
+        name="minimal_subscriber"
+        pkg="cpp_pubsub"
+        exec="listener"
+        output="screen">
+    </node>
+</launch>
